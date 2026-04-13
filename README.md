@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -190,7 +189,7 @@
     <!-- Header -->
     <header>
         <nav>
-            <a href="index.html" class="logo">🧪 NumericalSim</a>
+            
             
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
