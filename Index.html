@@ -6,29 +6,16 @@
     <title>Numerical Simulations in Computational Chemistry | CS1102 Project</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600&display=swap');
-        
-        :root {
-            --bg: #f8f9ff;
-            --text: #1a2639;
-            --primary: #4a6cf7;
-            --accent: #7b68ee;
-            --light-accent: #e0e7ff;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
+            background-color: #f8f9ff;
+            color: #1a2639;
             line-height: 1.7;
             font-size: 1.05rem;
+            margin: 0;
         }
-        
+
         header {
             background: white;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -36,7 +23,7 @@
             top: 0;
             z-index: 100;
         }
-        
+
         nav {
             max-width: 1100px;
             margin: 0 auto;
@@ -45,123 +32,103 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.65rem;
+            font-size: 1.7rem;
             font-weight: 600;
-            color: var(--primary);
+            color: #4a6cf7;
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
-        
+
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
             list-style: none;
+            margin: 0;
+            padding: 0;
         }
-        
+
         .nav-links a {
-            color: var(--text);
+            color: #1a2639;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
         }
-        
+
         .nav-links a:hover {
-            color: var(--primary);
+            color: #4a6cf7;
         }
-        
+
         .course-info {
             font-size: 0.95rem;
             color: #555;
-            font-weight: 500;
         }
-        
+
         .hero {
             max-width: 1100px;
             margin: 0 auto;
             padding: 5rem 2rem 4rem;
             text-align: center;
-            background: linear-gradient(135deg, #f0f4ff 0%, #f8f9ff 100%);
+            background: linear-gradient(135deg, #f0f4ff, #f8f9ff);
         }
-        
+
         .hero h1 {
             font-family: 'Poppins', sans-serif;
             font-size: 2.8rem;
             margin-bottom: 1rem;
             color: #1a2639;
         }
-        
-        .hero .course-title {
-            color: var(--primary);
+
+        .course-title {
+            color: #4a6cf7;
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
-            letter-spacing: 1px;
         }
-        
+
         .student-info {
-            background: var(--light-accent);
-            border: 1px solid var(--primary);
+            background: #e0e7ff;
+            border: 1px solid #4a6cf7;
             border-radius: 50px;
             display: inline-block;
             padding: 12px 28px;
             margin: 2rem 0;
             font-size: 1.1rem;
         }
-        
+
         .main-content {
             max-width: 1100px;
             margin: 0 auto;
             padding: 2rem;
         }
-        
+
         .section {
             margin-bottom: 4rem;
         }
-        
+
         .section h2 {
             font-family: 'Poppins', sans-serif;
-            font-size: 2.1rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            border-bottom: 3px solid var(--light-accent);
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+            color: #4a6cf7;
+            border-bottom: 3px solid #e0e7ff;
             padding-bottom: 10px;
         }
-        
+
         .content-box {
             background: white;
             border-radius: 16px;
             padding: 2.5rem;
-            box-shadow: 0 8px 25px rgba(74, 108, 247, 0.08);
+            box-shadow: 0 6px 20px rgba(74, 108, 247, 0.1);
             margin-bottom: 2.5rem;
             border: 1px solid #e0e7ff;
         }
-        
+
         .content-box p {
             font-size: 1.15rem;
             margin-bottom: 1.4rem;
             color: #333;
         }
-        
-        .tech-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 2rem;
-        }
-        
-        .tech-item {
-            background: var(--light-accent);
-            color: var(--primary);
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-        
+
         footer {
             background: #1a2639;
             color: #c0d0ff;
@@ -169,16 +136,10 @@
             padding: 3rem 2rem;
             margin-top: 5rem;
         }
-        
-        footer a {
-            color: #a0b8ff;
-            text-decoration: none;
-        }
-        
+
         @media (max-width: 768px) {
             .nav-links {
                 gap: 1.5rem;
-                font-size: 1rem;
             }
             .hero h1 {
                 font-size: 2.3rem;
@@ -187,14 +148,15 @@
     </style>
 </head>
 <body>
+
     <!-- Header -->
     <header>
         <nav>
-            
+          
             
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="howtheyareused.html">How they are used</a></li>
+                <li><a href="how-they-are-used.html">How they are used</a></li>
             </ul>
             
             <div class="course-info">
@@ -237,26 +199,26 @@
         <div class="section">
             <h2>Numerical Simulation Techniques</h2>
             <div class="content-box">
-                <h3 style="color: var(--primary); margin: 1.5rem 0 1rem;">Molecular Dynamics (MD)</h3>
+                <h3 style="color: #4a6cf7; margin: 1.5rem 0 1rem;">Molecular Dynamics (MD)</h3>
                 <p>
                     Molecular Dynamics is about tracking how molecules move over time. Computer starts with a bunch of atoms in certain positions and apply physics rules like Newton’s laws of motion to calculates how each atom pushes or pulls on its neighbors every tiny fraction of a second.
                 </p>
                 
-                <h3 style="color: var(--accent); margin: 2rem 0 1rem;">Monte Carlo Methods</h3>
+                <h3 style="color: #7b68ee; margin: 2rem 0 1rem;">Monte Carlo Methods</h3>
                 <p>
                     Monte Carlo methods meanwhile work differently, it don’t care about time at all. Instead, it use random sampling to explore the possible shapes or configurations a molecule can take, then average the properties we care about like energy. The simulation naturally spends more time in low-energy states and after enough steps we get thermodynamic averages without ever simulating the actual motion.
                 </p>
             </div>
         </div>
 
-        
     </div>
 
     <!-- Footer -->
     <footer>
         <p>CS1102 - Course Project - 2025 / 2026 Semester B</p>
-        
-        
+   
     </footer>
+
 </body>
+</html>
 </html>
