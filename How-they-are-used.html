@@ -1,34 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How They Are Used | Numerical Simulations in Computational Chemistry</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600&display=swap');
-        
-        :root {
-            --bg: #f8f9ff;
-            --text: #1a2639;
-            --primary: #4a6cf7;
-            --accent: #7b68ee;
-            --light-accent: #e0e7ff;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+       
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
+            background-color: #f8f9ff;
+            color: #1a2639;
             line-height: 1.7;
             font-size: 1.05rem;
+            margin: 0;
         }
-        
+
         header {
             background: white;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -36,7 +20,7 @@
             top: 0;
             z-index: 100;
         }
-        
+
         nav {
             max-width: 1100px;
             margin: 0 auto;
@@ -45,95 +29,92 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.65rem;
+            font-size: 1.7rem;
             font-weight: 600;
-            color: var(--primary);
+            color: #4a6cf7;
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
-        
+
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
             list-style: none;
+            margin: 0;
+            padding: 0;
         }
-        
+
         .nav-links a {
-            color: var(--text);
+            color: #1a2639;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
         }
-        
+
         .nav-links a:hover {
-            color: var(--primary);
+            color: #4a6cf7;
         }
-        
+
         .current {
-            color: var(--primary);
+            color: #4a6cf7;
             font-weight: 600;
         }
-        
+
         .course-info {
             font-size: 0.95rem;
             color: #555;
-            font-weight: 500;
         }
-        
-        .hero {
+
+        .banner {
             max-width: 1100px;
             margin: 0 auto;
             padding: 4rem 2rem 3rem;
             text-align: center;
-            background: linear-gradient(135deg, #f0f4ff 0%, #f8f9ff 100%);
+            background: linear-gradient(135deg, #f0f4ff, #f8f9ff);
         }
-        
-        .hero h1 {
+
+        .banner h1 {
             font-family: 'Poppins', sans-serif;
             font-size: 2.6rem;
             margin-bottom: 1rem;
             color: #1a2639;
         }
-        
+
         .main-content {
             max-width: 1100px;
             margin: 0 auto;
             padding: 2rem;
         }
-        
+
         .section {
             margin-bottom: 4rem;
         }
-        
+
         .section h2 {
             font-family: 'Poppins', sans-serif;
-            font-size: 2.1rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            border-bottom: 3px solid var(--light-accent);
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+            color: #4a6cf7;
+            border-bottom: 3px solid #e0e7ff;
             padding-bottom: 10px;
         }
-        
+
         .content-box {
             background: white;
             border-radius: 16px;
-            padding: 2.8rem;
-            box-shadow: 0 8px 25px rgba(74, 108, 247, 0.08);
+            padding: 2.5rem;
+            box-shadow: 0 6px 20px rgba(74, 108, 247, 0.1);
             margin-bottom: 2.5rem;
             border: 1px solid #e0e7ff;
         }
-        
+
         .content-box p {
             font-size: 1.15rem;
             margin-bottom: 1.6rem;
             color: #333;
         }
-        
+
         footer {
             background: #1a2639;
             color: #c0d0ff;
@@ -141,23 +122,23 @@
             padding: 3rem 2rem;
             margin-top: 5rem;
         }
-        
+
         @media (max-width: 768px) {
             .nav-links {
                 gap: 1.5rem;
-                font-size: 1rem;
             }
-            .hero h1 {
+            .banner h1 {
                 font-size: 2.2rem;
             }
         }
     </style>
 </head>
 <body>
+
     <!-- Header -->
     <header>
         <nav>
-            
+          
             
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -170,8 +151,8 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Banner Section -->
+    <section class="banner">
         <h1>How They Are Used</h1>
         <p style="font-size: 1.3rem; max-width: 800px; margin: 1.5rem auto; color: #444;">
             Using Molecular Dynamics and Monte Carlo to study complex molecular systems
@@ -196,12 +177,11 @@
             </div>
         </div>
 
-        <!-- Simple explanation boxes -->
         <div class="section">
             <h2>Why do we need these methods?</h2>
             <div class="content-box">
                 <p>
-                    Many important things in chemistry happen at a scale that is too small and too fast for us to see directly with experiments. 
+                    Many important things in chemistry happen at a scale that is too small and too fast for us to see directly with experiments.
                     Computers allow us to simulate what is happening inside molecules and materials step by step.
                 </p>
                 <p>
@@ -215,7 +195,9 @@
     <!-- Footer -->
     <footer>
         <p>CS1102 - Course Project - 2025 / 2026 Semester B</p>
-        
+        <p>Created by: Lee Tsz Hin (Student ID: 58752636)</p>
+        <p>Project Topic: Numerical Simulations in Computational Chemistry</p>
     </footer>
+
 </body>
 </html>
