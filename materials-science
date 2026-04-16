@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materials Science | Numerical Simulations in Computational Chemistry</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9ff;
+            color: #1a2639;
+            line-height: 1.7;
+            font-size: 1.05rem;
+            margin: 0;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #4a6cf7;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: #1a2639;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #4a6cf7;
+        }
+
+        .current {
+            color: #4a6cf7;
+            font-weight: 600;
+        }
+
+        .course-info {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .banner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f0f4ff, #f8f9ff);
+        }
+
+        .banner h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            color: #1a2639;
+        }
+
+        .main-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+            color: #4a6cf7;
+            border-bottom: 3px solid #e0e7ff;
+            padding-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.35rem;
+            color: #4a6cf7;
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .content-box {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 6px 20px rgba(74, 108, 247, 0.1);
+            margin-bottom: 2.5rem;
+            border: 1px solid #e0e7ff;
+        }
+
+        .content-box p {
+            font-size: 1.15rem;
+            margin-bottom: 1.6rem;
+            color: #333;
+        }
+
+        footer {
+            background: #1a2639;
+            color: #c0d0ff;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 5rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1.5rem;
+            }
+            .banner h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="howtheyareused.html">How they are used</a></li>
+                <li><a href="drug-discovery.html">Drug Discovery</a></li>
+                <li><a href="materials-science.html" class="current">Materials Science</a></li>
+            </ul>
+            
+            <div class="course-info">
+                CS1102 - Course Project - 2025 / 2026 Semester B
+            </div>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h1>Materials Science</h1>
+    </section>
+
+
+    <div class="main-content">
+
+        <div class="section">
+            <div class="content-box">
+                <p>
+                    Numerical simulation are used to design new polymers, batteries or nanomaterials.
+                </p>
+                <p>
+                    Molecular Dynamics can simulate how polymer chains pack together to predict mechanical strength or glass-transition temperature or how ions move through a solid electrolyte in a next-generation battery.
+                </p>
+                <p>
+                    Monte Carlo methods is perfect for studying phase transitions or defect distributions in crystals. Let scientist test “What-if” ideas like “What if I change this functional group?” without synthesizing every version in the lab.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Case example</h2>
+            <div class="content-box">
+                <p>
+                    In an industrial collaboration between Evonik and Schrodinger, scientists used Molecular Dynamics to improve trans-polyoctenamer rubber for more recyclable tires.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="subtitle">What they did?</div>
+            <div class="content-box">
+                <p>
+                    They built atomistic models of the polymer with different additives and macrocyclic structures, then ran Molecular Dynamics simulations to study how these affect packing, dynamics, and mechanical properties at the molecular level.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="subtitle">Outcome</div>
+            <div class="content-box">
+                <p>
+                    The simulations give insights into additive impacts that were hard or expensive to test experimentally. This helped optimize formulations for better recyclability while maintaining performance, accelerating material development without endless lab trials.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <p>CS1102 - Course Project - 2025 / 2026 Semester B</p>
+       
+    </footer>
+
+</body>
+</html>
