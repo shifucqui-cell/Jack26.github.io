@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Numerical Simulations in Computational Chemistry | CS1102 Project</title>
+    <title>Drug Discovery | Numerical Simulations in Computational Chemistry</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600&display=swap');
 
@@ -43,11 +43,10 @@
 
         .nav-links {
             display: flex;
-            gap: 1.8rem;
+            gap: 2rem;
             list-style: none;
             margin: 0;
             padding: 0;
-            flex-wrap: wrap;
         }
 
         .nav-links a {
@@ -60,6 +59,11 @@
             color: #4a6cf7;
         }
 
+        .current {
+            color: #4a6cf7;
+            font-weight: 600;
+        }
+
         .course-info {
             font-size: 0.95rem;
             color: #555;
@@ -68,32 +72,16 @@
         .banner {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 5rem 2rem 4rem;
+            padding: 4rem 2rem 3rem;
             text-align: center;
             background: linear-gradient(135deg, #f0f4ff, #f8f9ff);
         }
 
         .banner h1 {
             font-family: 'Poppins', sans-serif;
-            font-size: 2.8rem;
+            font-size: 2.6rem;
             margin-bottom: 1rem;
             color: #1a2639;
-        }
-
-        .course-title {
-            color: #4a6cf7;
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .student-info {
-            background: #e0e7ff;
-            border: 1px solid #4a6cf7;
-            border-radius: 50px;
-            display: inline-block;
-            padding: 12px 28px;
-            margin: 2rem 0;
-            font-size: 1.1rem;
         }
 
         .main-content {
@@ -115,6 +103,13 @@
             padding-bottom: 10px;
         }
 
+        .subtitle {
+            font-size: 1.35rem;
+            color: #4a6cf7;
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+        }
+
         .content-box {
             background: white;
             border-radius: 16px;
@@ -126,7 +121,7 @@
 
         .content-box p {
             font-size: 1.15rem;
-            margin-bottom: 1.4rem;
+            margin-bottom: 1.6rem;
             color: #333;
         }
 
@@ -140,20 +135,18 @@
 
         @media (max-width: 768px) {
             .nav-links {
-                gap: 1rem;
+                gap: 1.5rem;
             }
             .hero h1 {
-                font-size: 2.3rem;
+                font-size: 2.2rem;
             }
         }
     </style>
 </head>
 <body>
 
-
     <header>
         <nav>
-
             
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -169,45 +162,59 @@
         </nav>
     </header>
 
- 
+
     <section class="banner">
-        <div class="course-title">CS1102 - Course Project - 2025 / 2026 Semester B</div>
-        <h1>Numerical Simulations in Computational Chemistry</h1>
-        
-        <div class="student-info">
-            <strong>Lee Tsz Hin</strong> (Student ID: 58752636)
-        </div>
-        
-        <p style="max-width: 700px; margin: 2rem auto; font-size: 1.25rem;">
-            Understanding how computers help scientists study molecules without doing real experiments
-        </p>
+        <h1>Drug Discovery</h1>
     </section>
 
     <div class="main-content">
 
         <div class="section">
-            <h2>What is Numerical Simulation?</h2>
             <div class="content-box">
                 <p>
-                    Numerical simulation involves creating virtual computer models to analyze and predict the behavior of complex physical systems, products, or processes under various conditions.
+                    Numerical simulation helps researchers screen potential drug molecules virtually before spending money on lab tests.
                 </p>
                 <p>
-                    It is used to simulate, visualize, and optimize systems that are too complex, expensive, or dangerous to test in real life and reduces the need for costly physical prototyping in industries like aerospace, automotive, and manufacturing.
+                    Molecular Dynamics could be run on a protein target with thousands of candidate ligands docked into the active site, then watch how stable the binding is over nanoseconds or microseconds
+                </p>
+                <p>
+                    Monte Carlo methods is used in free-energy perturbation calculations to rank how tightly different drugs bind, the result is faster lead optimization and fewer failed clinical trials.
                 </p>
             </div>
         </div>
 
         <div class="section">
-            <h2>Numerical Simulation Techniques</h2>
+            <h2>Case example</h2>
             <div class="content-box">
-                <h3 style="color: #4a6cf7; margin: 1.5rem 0 1rem;">Molecular Dynamics (MD)</h3>
                 <p>
-                    Molecular Dynamics is about tracking how molecules move over time. Computer starts with a bunch of atoms in certain positions and apply physics rules like Newton’s laws of motion to calculates how each atom pushes or pulls on its neighbors every tiny fraction of a second.
+                    One common application is studying membrane proteins like G-protein coupled receptors which are major drug targets. Research ran simulations on GPCRs embedded in a realistic lipid bilayer to see how protein moves and how drugs bind.
                 </p>
-                
-                <h3 style="color: #7b68ee; margin: 2rem 0 1rem;">Monte Carlo Methods</h3>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="subtitle">How?</div>
+            <div class="content-box">
                 <p>
-                    Monte Carlo methods meanwhile work differently, it don’t care about time at all. Instead, it use random sampling to explore the possible shapes or configurations a molecule can take, then average the properties we care about like energy. The simulation naturally spends more time in low-energy states and after enough steps we get thermodynamic averages without ever simulating the actual motion.
+                    They used all-atom Molecular Dynamics with force fields like CHARMM or AMBER to simulate the receptor over nanoseconds to microseconds. This revealed hidden binding pockets that only open during motion and helped calculate binding stability.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="subtitle">Outcome</div>
+            <div class="content-box">
+                <p>
+                    Molecular Dynamics helped explain why some drug candidates bind better than others and guided the design of more selective ligands. It also showed how the surrounding membrane affects drug entry, something static docking misses.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="subtitle">Why Molecular Dynamics is important in Drug discovery?</div>
+            <div class="content-box">
+                <p>
+                    It matters for accuracy and cost. Standard classical force field gave good agreement with experimental data for conformational changes. But for very long times, they need special hardware like Anton supercomputers which can speed things up dramatically.
                 </p>
             </div>
         </div>
@@ -216,7 +223,7 @@
 
     <footer>
         <p>CS1102 - Course Project - 2025 / 2026 Semester B</p>
-  
+
     </footer>
 
 </body>
