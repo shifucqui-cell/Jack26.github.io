@@ -145,7 +145,6 @@
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <nav>
             
@@ -154,7 +153,8 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="howtheyareused.html">How they are used</a></li>
                 <li><a href="drug-discovery.html">Drug Discovery</a></li>
-                <li><a href="materials-science.html" class="current">Materials Science</a></li>
+                <li><a href="materials-science.html">Materials Science</a></li>
+                <li><a href="references.html" class="current">References</a></li>
             </ul>
             
             <div class="course-info">
